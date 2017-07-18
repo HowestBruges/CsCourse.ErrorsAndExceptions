@@ -52,6 +52,12 @@ namespace CsCourse.WpfErrors.TryCatchExample
         /// </summary>
         private int CalculateSum(int number1, int number2)
         {
+            //check if either number is negative
+            if (number1 < 0 || number2 < 0)
+            {
+                throw new ArgumentOutOfRangeException("Terms should not be negative");
+            }
+            //this instruction will only be executed reached if no exception occurred
             return number1 + number2;
         }
 
