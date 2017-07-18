@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,6 +45,11 @@ namespace CsCourse.WpfErrors.TryCatchExample
                 //generic error message is shown
                 MessageBox.Show("An error has occurred.\n\nDetails: " + ex.Message,
                                 "Input error!", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            finally
+            {
+                //always write to output window (in Visual Studio)
+                Debug.WriteLine("Last execution: {0:dd/MM/yyyy HH:mm:ss}", DateTime.Now);
             }
         }
 
