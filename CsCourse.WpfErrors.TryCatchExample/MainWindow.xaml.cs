@@ -64,7 +64,7 @@ namespace CsCourse.WpfErrors.TryCatchExample
                 throw new ArgumentOutOfRangeException("Terms should not be negative");
             }
             //this instruction will only be executed reached if no exception occurred
-            return number1 + number2;
+            return checked(number1 + number2);
         }
 
     }
