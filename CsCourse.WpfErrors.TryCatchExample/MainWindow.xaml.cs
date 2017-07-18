@@ -39,9 +39,10 @@ namespace CsCourse.WpfErrors.TryCatchExample
                 MessageBox.Show("Please enter integer values only.\n\nDetails: " + fEx.Message,
                                 "Input error!", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-            catch (OverflowException oEx)
+            catch (Exception ex) //catches all unhandled exceptions (FormatException are already handled above)
             {
-                MessageBox.Show("The numbers you entered are too large or to small.\n\nDetails: " + oEx.Message,
+                //generic error message is shown
+                MessageBox.Show("An error has occurred.\n\nDetails: " + ex.Message,
                                 "Input error!", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
