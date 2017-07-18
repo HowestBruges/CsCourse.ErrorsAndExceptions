@@ -27,10 +27,18 @@ namespace CsCourse.WpfErrors.TryCatchExample
 
         private void btnSum_Click(object sender, RoutedEventArgs e)
         {
-            int numberLeft = int.Parse(txtNumber1.Text);  //parse string to int
-            int numberRight = int.Parse(txtNumber2.Text); //parse string to int
-            int sum = CalculateSum(numberLeft, numberRight);
-            tbResult.Text = sum.ToString(); //convert int back to string and set in textblock
+            try
+            {
+                int numberLeft = int.Parse(txtNumber1.Text);
+                int numberRight = int.Parse(txtNumber2.Text); //parse string to int
+                int sum = CalculateSum(numberLeft, numberRight);
+                tbResult.Text = sum.ToString(); //convert int back to string and set in textblock
+            }
+            catch (FormatException fEx)
+            {
+                MessageBox.Show("Please enter integer values only.\n\nDetails: " + fEx.Message,
+                                "Input error!", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         /// <summary>
