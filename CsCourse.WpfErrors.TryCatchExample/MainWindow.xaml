@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CsCourse.WpfErrors.TryCatchExample"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="WPF Errors" Height="88.5" Width="339">
     <Grid>
-        
+
+        <TextBox x:Name="txtNumber1" HorizontalContentAlignment="Right" Margin="10,10,0,0" Text="0" Width="60" Height="20" HorizontalAlignment="Left"  VerticalAlignment="Top" />
+        <Label Content="+" Padding="0" HorizontalContentAlignment="Center" Margin="75,10,0,0" Height="20" Width="15" HorizontalAlignment="Left"  VerticalAlignment="Top"/>
+        <TextBox x:Name="txtNumber2" HorizontalContentAlignment="Right" Margin="95,9,0,0" Text="0" Width="60" Height="20" HorizontalAlignment="Left"  VerticalAlignment="Top" />
+        <Button x:Name="btnSum" Content="=" Margin="160,9,0,0" Padding="0" VerticalContentAlignment="Center" Height="20" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="25" />
+        <Border BorderThickness="1" BorderBrush="LightGray" Margin="190,9,8,0" Height="20"  VerticalAlignment="Top" >
+            <TextBlock x:Name="tbResult" Text="" Padding="0" TextAlignment="Right"  />
+        </Border>
     </Grid>
 </Window>
