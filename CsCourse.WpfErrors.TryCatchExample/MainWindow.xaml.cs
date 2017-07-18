@@ -24,5 +24,22 @@ namespace CsCourse.WpfErrors.TryCatchExample
         {
             InitializeComponent();
         }
+
+        private void btnSum_Click(object sender, RoutedEventArgs e)
+        {
+            int numberLeft = int.Parse(txtNumber1.Text);  //parse string to int
+            int numberRight = int.Parse(txtNumber2.Text); //parse string to int
+            int sum = CalculateSum(numberLeft, numberRight);
+            tbResult.Text = sum.ToString(); //convert int back to string and set in textblock
+        }
+
+        /// <summary>
+        /// Calculates the sum of two numbers
+        /// </summary>
+        private int CalculateSum(int number1, int number2)
+        {
+            return number1 + number2;
+        }
+
     }
 }
